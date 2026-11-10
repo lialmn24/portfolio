@@ -67,8 +67,8 @@
    and the visitor has not picked anything yet. */
 :root[data-theme="dark"] {
   --hero-bg: #171c5c;
-  --bg: #0c0f26;
-  --bg-alt: #121638;
+  --bg: #04050d;
+  --bg-alt: #0a0c22;
   --surface: #181c45;
   --text: #eef0ff;
   --text-muted: #aeb3dc;
@@ -86,8 +86,8 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     --hero-bg: #171c5c;
-    --bg: #0c0f26;
-    --bg-alt: #121638;
+    --bg: #04050d;
+    --bg-alt: #0a0c22;
     --surface: #181c45;
     --text: #eef0ff;
     --text-muted: #aeb3dc;
