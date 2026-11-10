@@ -6,7 +6,7 @@
   <title>Web Design &amp; Development | Julia Cassandra Alemania</title>
   <meta name="description" content="Portfolio of Julia Cassandra U. Alemania, a BS Information Technology student and Dean's Lister. Skills, certifications, projects, and contact details.">
   <meta name="author" content="Julia Cassandra U. Alemania">
-  <meta name="theme-color" content="#0B6FA4">
+  <meta name="theme-color" content="#04050d">
   <link rel="canonical" href="https://lcct-24-13115.github.io/final_project_portfolio/">
 
   <!-- Link preview (Facebook, Messenger, LinkedIn, X) -->
@@ -26,8 +26,8 @@
     try { if (sessionStorage.getItem("launched")) document.documentElement.classList.add("no-launch"); } catch (err) { /* ignore */ }
     try {
       var saved = localStorage.getItem("theme");
-      if (saved) document.documentElement.setAttribute("data-theme", saved);
-    } catch (err) { /* storage unavailable: fall back to the system theme */ }
+      document.documentElement.setAttribute("data-theme", saved || "dark");
+    } catch (err) { document.documentElement.setAttribute("data-theme", "dark"); }
   </script>
 
   <!-- Display font for headings (falls back to the bundled Poppins if it cannot load) -->
@@ -124,7 +124,6 @@
                 <li>Firebase Hosting</li>
               </ul>
               <div class="btn-row">
-                <a class="btn btn-primary" href="https://github.com/lcct-24-13115/tom_and_jerry_new" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub<span class="sr-only"> repository of Tom and Jerry: Intel Byte Chase (opens in a new tab)</span></a>
                 <a class="btn btn-outline" href="https://tom-jerry-multiplayer.web.app/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i> Live demo<span class="sr-only"> of Tom and Jerry: Intel Byte Chase (opens in a new tab)</span></a>
               </div>
             </div>
@@ -170,7 +169,7 @@
                 <li>Blade</li>
               </ul>
               <div class="btn-row">
-                <a class="btn btn-primary" href="https://github.com/lcct-24-13115/school-maintenance-system" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub<span class="sr-only"> repository of Maintenance Ticketing System (opens in a new tab)</span></a>
+                <a class="btn btn-primary" href="https://github.com/lcct-24-13115/maintenance_system" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github" aria-hidden="true"></i> GitHub<span class="sr-only"> repository of Maintenance Ticketing System (opens in a new tab)</span></a>
               </div>
             </div>
             <ul class="gallery-list" hidden data-gallery-list="maint">
