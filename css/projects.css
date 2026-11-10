@@ -1,0 +1,180 @@
+/* ==========================================================
+   projects.css | Styles for projects.html only.
+   Header, footer, buttons, fonts and colors come from site.css and
+   the shared files. Load order on projects.html:
+   julia-style > space-theme > about-plus > pages > orbit-ui > site > projects
+   ========================================================== */
+
+/* Page heading */
+.page-head {
+  text-align: center;
+  padding: 3.5rem 0 2.75rem;
+}
+.page-head .eyebrow {
+  margin-bottom: 0.6rem;
+}
+.page-head h1 {
+  margin: 0;
+  font-size: clamp(3.4rem, 10vw, 7.4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  text-shadow: 0 6px 40px rgba(0, 0, 0, 0.35);
+}
+:root[data-theme="light"] .page-head h1 {
+  text-shadow: none;
+}
+.page-head .sub {
+  max-width: 720px;
+  margin: 1rem auto 0;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+/* Project category cards (a big image card per category) */
+.choose {
+  width: min(1020px, 100% - 3rem);
+  margin: 0 auto;
+  padding-bottom: 3rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.6rem;
+}
+.project-card {
+  --dot: var(--nebula-cyan);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: min(620px, 82svh);
+  padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 44px;
+  overflow: hidden;
+  isolation: isolate;
+  color: #fff;
+  text-decoration: none;
+  transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), border-color 0.3s, box-shadow 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.55);
+}
+.project-card .bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  background: url("../images/web-design-bg.jpg") center / cover no-repeat;
+  filter: saturate(1.1);
+  transition: transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.project-card:hover .bg {
+  transform: scale(1.02);
+}
+.project-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(to top, rgba(4, 5, 13, 0.97) 10%, rgba(4, 5, 13, 0.7) 38%, rgba(4, 5, 13, 0) 62%);
+}
+.project-card .num,
+.project-card .count {
+  position: absolute;
+  top: 1.9rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-pill);
+  background: rgba(8, 9, 16, 0.7);
+  backdrop-filter: blur(8px);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+}
+.project-card .num {
+  left: 1.9rem;
+}
+.project-card .count {
+  right: 1.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-transform: uppercase;
+}
+.project-card .count::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dot);
+}
+.project-card .kicker {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  color: var(--dot);
+}
+.project-card h2 {
+  margin: 0.75rem 0 1.75rem;
+  font-size: clamp(2rem, 4.2vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.02;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  background: linear-gradient(180deg, #fff, #b9c9ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.project-card .go {
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: var(--radius-pill);
+  background: rgba(8, 9, 16, 0.55);
+  backdrop-filter: blur(8px);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.project-card .go i {
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #f1eeee;
+  color: #0b0b12;
+  transition: transform 0.3s;
+}
+.project-card:hover .go i {
+  transform: rotate(45deg);
+}
+@media (hover: none) {
+  .project-card:hover {
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .page-head {
+    padding-top: 2.5rem;
+  }
+  .project-card {
+    min-height: 500px;
+    padding: 1.75rem;
+    border-radius: 34px;
+  }
+  .project-card .num {
+    left: 1.2rem;
+  }
+  .project-card .count {
+    right: 1.2rem;
+  }
+}

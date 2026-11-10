@@ -12,7 +12,7 @@ Basehan: about, experience, links, contact. Lahat ng page ay gagamit ng `css/sit
 <!-- page-specific css here (experience-plus, links, contact-plus) -->
 <link rel="stylesheet" href="css/orbit-ui.css?v=1">
 <link rel="stylesheet" href="css/site.css?v=1">
-<!-- index.html lang: <link rel="stylesheet" href="css/home.css?v=1"> -->
+<!-- page-own css after site.css: index.html > css/home.css, projects.html > css/projects.css -->
 ```
 
 Ang `site.css` ang pinakahuli para ito ang mananaig. Kapag tapos na ang Phase 5, puwede nang paliitin ang mga lumang file.
@@ -118,5 +118,5 @@ Dagdag lang ang page-specific na script (hal. `experience-plus.js`, `links.js`).
 - Ang desktop pill nav (861px pataas) ay galing pa rin sa `orbit-ui.css` (dark pill, maliit na uppercase na links). Ang `site.css` ay para sa mas makitid na screen lang hanggang sa pagsamahin ang dalawa sa Phase 5.
 - Ang `orbit-ui.js` ay nag-iinject sa BAWAT page ng: starfield at aurora, round menu na `···` (kaliwang itaas), social dock, copyright, share button at music button. Huwag nang gumawa ng sariling bersyon ng mga ito sa mga page.
 - Ang `···` round menu ay nakapatong sa logo ng brand sa kaliwang itaas ng lahat ng page (kasama ang about). Susuriin sa Phase 5.
-- Ang `projects.html` ay may sariling inline `<style>` at Gloock/Montserrat pa. Aalisin sa Phase 3.
-- Tapos na ang `index.html` (Phase 2): ang landing styles ay nasa `css/home.css`.
+- Tapos na ang `index.html` (Phase 2, `css/home.css`) at `projects.html` (Phase 3, `css/projects.css`).
+- Ang mga page-own na class ay hindi dapat kapareho ng pangalan ng shared class. Halimbawa, ang project cards ay `.project-card` at hindi `.card`, para hindi sila banggain ng `.card` ng `site.css`.
