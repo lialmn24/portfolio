@@ -12,6 +12,7 @@ Basehan: about, experience, links, contact. Lahat ng page ay gagamit ng `css/sit
 <!-- page-specific css here (experience-plus, links, contact-plus) -->
 <link rel="stylesheet" href="css/orbit-ui.css?v=1">
 <link rel="stylesheet" href="css/site.css?v=1">
+<!-- index.html lang: <link rel="stylesheet" href="css/home.css?v=1"> -->
 ```
 
 Ang `site.css` ang pinakahuli para ito ang mananaig. Kapag tapos na ang Phase 5, puwede nang paliitin ang mga lumang file.
@@ -114,6 +115,8 @@ Dagdag lang ang page-specific na script (hal. `experience-plus.js`, `links.js`).
 
 ## Mga bagay na dapat bantayan sa susunod na phase
 
-- Ang `orbit-ui.css` ay may sariling desktop nav (dark pill, uppercase) at floating menu, share at music buttons. Sa Phase 2 hanggang 5, ikukumpara muna ito sa `site.css` bago ilipat ang final na itsura ng nav.
-- Ang desktop pill nav ay nasa `orbit-ui.css` (mula 861px), at ang mobile dropdown ay hanggang 760px. May puwang sa 761 hanggang 860px. Susuriin ito sa Phase 5.
-- Ang `index.html` at `projects.html` ay may sariling inline `<style>` at Gloock/Montserrat. Aalisin ito sa Phase 2 at 3.
+- Ang desktop pill nav (861px pataas) ay galing pa rin sa `orbit-ui.css` (dark pill, maliit na uppercase na links). Ang `site.css` ay para sa mas makitid na screen lang hanggang sa pagsamahin ang dalawa sa Phase 5.
+- Ang `orbit-ui.js` ay nag-iinject sa BAWAT page ng: starfield at aurora, round menu na `···` (kaliwang itaas), social dock, copyright, share button at music button. Huwag nang gumawa ng sariling bersyon ng mga ito sa mga page.
+- Ang `···` round menu ay nakapatong sa logo ng brand sa kaliwang itaas ng lahat ng page (kasama ang about). Susuriin sa Phase 5.
+- Ang `projects.html` ay may sariling inline `<style>` at Gloock/Montserrat pa. Aalisin sa Phase 3.
+- Tapos na ang `index.html` (Phase 2): ang landing styles ay nasa `css/home.css`.

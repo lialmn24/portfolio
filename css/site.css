@@ -291,41 +291,48 @@ ol {
   content: "\2726";
   color: var(--sun);
 }
-.site-nav ul {
-  display: flex;
-  align-items: center;
-  gap: 0.15rem;
-  padding: 0.3rem;
-  border: 1px solid var(--border);
-  border-radius: var(--radius-pill);
-  background: color-mix(in srgb, var(--surface) 85%, transparent);
-  backdrop-filter: blur(10px);
+/* Pill styling for the nav list and links. On desktop (861px and up) orbit-ui.css
+   owns this look (dark pill, small uppercase links), so site.css only styles the
+   narrower screens until the two files are merged in Phase 5. */
+@media (max-width: 860px) {
+  .site-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 0.15rem;
+    padding: 0.3rem;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-pill);
+    background: color-mix(in srgb, var(--surface) 85%, transparent);
+    backdrop-filter: blur(10px);
+  }
+  .site-nav a {
+    display: block;
+    padding: 0.5rem 0.9rem;
+    border-radius: var(--radius-pill);
+    color: var(--text);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.04em;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+  }
 }
-.site-nav a {
-  display: block;
-  padding: 0.5rem 0.9rem;
-  border-radius: var(--radius-pill);
-  color: var(--text);
-  font-weight: 600;
-  font-size: 0.95rem;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  transition: background 0.2s, color 0.2s;
-}
-.site-nav a:hover {
-  background: var(--chip-bg);
-}
-.site-nav a[aria-current="page"],
-.site-nav a.active {
-  background: var(--brand);
-  color: var(--on-brand);
-}
-.site-nav .nav-cta a {
-  border: 1px solid var(--sun);
-  color: var(--link);
-}
-.site-nav .nav-cta a[aria-current="page"] {
-  color: var(--on-brand);
+@media (max-width: 860px) {
+  .site-nav a:hover {
+    background: var(--chip-bg);
+  }
+  .site-nav a[aria-current="page"],
+  .site-nav a.active {
+    background: var(--brand);
+    color: var(--on-brand);
+  }
+  .site-nav .nav-cta a {
+    border: 1px solid var(--sun);
+    color: var(--link);
+  }
+  .site-nav .nav-cta a[aria-current="page"] {
+    color: var(--on-brand);
+  }
 }
 .icon-btn {
   flex-shrink: 0;

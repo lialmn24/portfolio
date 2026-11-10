@@ -1,0 +1,84 @@
+/* ==========================================================
+   home.css | Styles for the landing section of index.html only.
+   Everything else (header, footer, buttons, fonts, colors) comes
+   from site.css and the shared files. Load order on index.html:
+   julia-style > space-theme > about-plus > pages > orbit-ui > site > home
+   ========================================================== */
+
+.landing {
+  position: relative;
+  min-height: calc(100vh - var(--header-h));
+  min-height: calc(100svh - var(--header-h));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 1.25rem 5rem;
+  color: #fff;
+  background: radial-gradient(ellipse at 50% 55%, rgba(27, 26, 99, 0.9) 0, transparent 60%);
+}
+/* In light mode the animated sky is hidden, so the landing brings its own dark space. */
+:root[data-theme="light"] .landing {
+  background: radial-gradient(ellipse at 50% 55%, #1b1a63 0, transparent 60%), #05061a;
+}
+:root[data-theme="light"] .landing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: var(--stars);
+  background-size: var(--stars-size);
+  opacity: 0.8;
+  pointer-events: none;
+}
+.landing > * {
+  position: relative;
+}
+
+.landing-photo {
+  width: min(320px, 70vw);
+  aspect-ratio: 1;
+  padding: 6px;
+  border-radius: 50%;
+  background: conic-gradient(from 200deg, var(--blush), var(--nebula-violet), var(--sun), var(--blush));
+  box-shadow: 0 0 90px rgba(143, 123, 255, 0.35);
+}
+.landing-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 50%;
+  border: 5px solid var(--space-deep);
+  object-fit: cover;
+  object-position: 50% 22%;
+}
+.landing-roles {
+  margin: 1.75rem 0 0;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #cfd3f2;
+}
+.landing h1 {
+  margin: 0.9rem 0 0;
+  font-size: clamp(3.6rem, 11vw, 7.6rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.03em;
+  text-shadow: 0 6px 40px rgba(0, 0, 0, 0.6);
+}
+.landing-cta {
+  justify-content: center;
+  margin-top: 2.25rem;
+}
+
+@media (max-width: 640px) {
+  .landing {
+    padding-bottom: 4rem;
+  }
+  .landing-roles {
+    letter-spacing: 0.14em;
+    line-height: 1.9;
+  }
+}
