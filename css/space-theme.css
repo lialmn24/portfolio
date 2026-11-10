@@ -172,31 +172,12 @@ html.launching {
   color: var(--sun);
 }
 
-/* ---------- Dark mode: the whole page becomes night sky ---------- */
-:root[data-theme="dark"] body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  background-image: var(--stars);
-  background-size: var(--stars-size);
-  opacity: 0.55;
-  pointer-events: none;
-}
+/* ---------- Dark mode: translucent section bands ----------
+   The animated starfield + aurora glows come from orbit-ui.js on every page. */
 :root[data-theme="dark"] .section.alt {
   background: rgba(18, 22, 56, 0.72);
 }
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background-image: var(--stars);
-    background-size: var(--stars-size);
-    opacity: 0.55;
-    pointer-events: none;
-  }
   :root:not([data-theme="light"]) .section.alt {
     background: rgba(18, 22, 56, 0.72);
   }
