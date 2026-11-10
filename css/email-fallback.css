@@ -1,0 +1,6 @@
+/* Fallback options next to every "Email me" button, for visitors with no mail app set up */
+.mail-alt{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;margin:14px 0 18px;font-size:.8rem;color:var(--mute)}
+.mail-alt a,.mail-alt button{color:var(--ink);background:none;border:0;border-bottom:1px solid var(--line);padding:2px 0;font:inherit;cursor:pointer;text-decoration:none}
+.mail-alt a:hover,.mail-alt button:hover{border-bottom-color:var(--rose);color:var(--rose)}
+.mail-alt .mail-addr{color:var(--ink);font-weight:600;user-select:all}
+.links-side .mail-alt{justify-content:center;margin-top:12px}
