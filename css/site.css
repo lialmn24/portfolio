@@ -220,13 +220,13 @@ ol {
 .section-head {
   margin-bottom: var(--space-6);
 }
-.section-head h2 {
+.section-head :is(h1, h2) {
   font-size: var(--fs-h2);
   font-weight: 800;
   letter-spacing: -0.025em;
   margin: 0;
 }
-.section-head h2::after {
+.section-head :is(h1, h2)::after {
   content: "";
   display: block;
   width: 96px;

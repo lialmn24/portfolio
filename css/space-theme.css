@@ -359,7 +359,7 @@ html.launching {
 }
 
 /* ---------- Section titles ---------- */
-.section-head h2::after {
+.section-head :is(h1, h2)::after {
   width: 96px;
   height: 6px;
   background: linear-gradient(90deg, var(--sun), #ff8ac0, #7b8cff);

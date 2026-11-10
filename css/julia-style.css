@@ -567,14 +567,14 @@ ul, ol {
 .section-head {
   margin-bottom: 2.5rem;
 }
-.section-head h2 {
+.section-head :is(h1, h2) {
   font-size: clamp(2.1rem, 5vw, 3.4rem);
   font-weight: 800;
   letter-spacing: -0.025em;
   margin: 0;
 }
 /* Short sun-colored bar under every section title */
-.section-head h2::after {
+.section-head :is(h1, h2)::after {
   content: "";
   display: block;
   width: 72px;
